@@ -1,5 +1,5 @@
 
-# Autonomous Vehicle Tracking By Drone Using Deep Learning
+# Autonomous Vehicle Tracking By Drone Using Deep Learning (Refer Thesis's pdf file to understand more about project)
 
 Problem Statement: How can we utilize the modern drone technology to improve aspects of transportation and security, like vehicle tracking and other related security issues?
 
