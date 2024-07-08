@@ -1,0 +1,12 @@
+# APYC Algorithm - Adaptice Proportional Yaw Control.
+
+This algorithm is used to make the dron follow an object in real-time based on it's pre generated bounding box.
+So one should keep this thing in mind that, Generating a bounding box first is the prerequisite of this action.
+How does this Algortihm works?
+Ans: The APYC algorithm follows the following logic, for forward and backward motion there are two parameters named maximum threshold value and minimum threshold value, which are simply the maximum and minimum areas of square shaped bounding boxes that are generated using Haar cascades. 
+In the code it is given that if the area of the bounding box is more than some specific number (unit2) it will be concluded by the algorithm that the targeted object is very near to the camera and the drone should move backwards to prevent collision with the person and  this area is saved as maximum threshold value, vice versa for minimum threshold value case the drone moves forward to keep the bounding box in the mid region of maximum and minimum threshold. For a better understanding please look at the figure. For maintaining the yaw angle the APYC algorithm follows the following principle, to always keep the target at the middle of the frame throughout the drone’s journey of tracking the person. For this, a center line was taken which exactly bisects the drone’s video feed, now the centroid of the bounding box obtained using Haar cascades should lay on this center line which ultimately turns the drone (changes its yaw angle) in order to bring the target to the 
+middle of the frame.
+
+Drive link - https://drive.google.com/file/d/1ovZBlkwmXbHnAV047lyGznZS2r7LO4_1/view?usp=sharing
+
+For more information please refer Page no.19 from the Thesis.pdf file.
